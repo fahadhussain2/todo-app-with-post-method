@@ -1,0 +1,23 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+h2{
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+ol{
+    margin-left: 450px
+}
+
+#todo{
+    margin-left: 500px;
+}
+
+span{
+    color: red
+}

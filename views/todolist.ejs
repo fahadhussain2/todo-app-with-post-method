@@ -1,0 +1,29 @@
+<% include partials/header %>
+
+<h1>Todo App With Post Method</h1>
+
+<div id="todo"><form method="POST" action="/">
+    <label>Enter Task</label>
+    <input type="text" name="todo">
+    <input type="submit" name="todotask" value="submit"><br>
+    <span>
+    <% if(errors){ %>
+    <% errors.forEach(function(error){ %>
+    <%= error.msg %>
+    <% })%>
+    <% } %>
+    </span>
+</form>
+</div>
+
+<h2>Todo Tasks</h2>
+
+<ol>
+<% if(todos){%>
+<% todos.forEach(function(tasks,i){ %> 
+<li> <form method="POST" action="/delete"> <%= tasks %> <button type="submit" name="index" value="<%= i %>">Delete</button></form></li> 
+<% }) %>
+<% } %>
+</ol>
+ 
+<% include partials/footer %>
